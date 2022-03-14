@@ -58,7 +58,8 @@ values ('Snoop Dog'),
   ('Benedictine Cucumberbatch'),
   ('Colonel Sanders'),
   ('Professor Woofington'),
-  ('DROP TABLE library_users');
+  ('DROP TABLE library_users')
+  ('Frank Reynolds');
 
 select * from book_catalogue;
 select * from library_catalogue;
