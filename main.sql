@@ -27,11 +27,13 @@ create table if not exists library_users(
 drop table if exists user_borrows;
 
 create table if not exists user_borrows(
-  ISSN integer primary key,
+  borrow_number integer primary key,
+  ISSN integer,
   date_borrowed date,
   date_due date,
   user_borrowed varchar(80),
-  foreign key (user_borrowed) references library_users(user_name)
+  foreign key (user_borrowed) references library_users(user_name),
+  foreign key (ISSN) references library_catalogue(ISSN)
 );
 
 insert into book_catalogue (book_title, book_primary_author, book_genre)
